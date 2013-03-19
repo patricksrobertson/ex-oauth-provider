@@ -2,6 +2,8 @@ class Oauth2Verifier < OauthToken
   validates_presence_of :user
   attr_accessor :state
 
+  attr_accessible :client_application, :user, :scope
+
   def exchange!(params={})
     OauthToken.transaction do
       token = Oauth2Token.create! :user=>user,:client_application=>client_application, :scope => scope
