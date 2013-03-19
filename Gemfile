@@ -7,6 +7,11 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+gem 'devise'
+gem 'oauth-plugin', '~> 0.4.0'
+group :test do
+  gem 'rspec-rails'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
